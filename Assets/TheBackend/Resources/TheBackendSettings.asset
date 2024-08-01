@@ -16,13 +16,12 @@ MonoBehaviour:
   signatureKey: af35ed11-a61e-11ed-8fb0-8f384a9cf83f4494
   functionAuthKey: 
   packageName: com.DefaultCompany.TheBackendServerTry
-  isAllPlatform: 1
   sendLogReport: 1
-  rateCountActive: 1
   timeOutSec: 100
-  Version: 5.9.3
+  Version: 5.12.0
   autoRefreshToken: 1
   retryWhenClientRequestFailError: 1
   retryWhenServerError: 1
-  retryWhenBadSignatureError: 1
   initFailWhenDeviceIdUnknown: 1
+  autoLoadLocationProperties: 0
+  waitUntilInitializeFinish: 1
