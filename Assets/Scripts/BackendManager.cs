@@ -21,7 +21,7 @@ public class BackendManager : MonoBehaviour
 
             BackendLogin.Instance.CustomLogin(m_ID, m_PW); // 뒤끝 로그인
 
-            BackendCoupon.Instance.CouponUse(m_couponCode);
+            BackendGameLog.Instance.GameLogInsert(); // [추가] 게임 로그 저장 기능
 
         }
         else
