@@ -6,7 +6,7 @@ using BackEnd;
 public class BackendManager : MonoBehaviour
 {
     private string m_ID = "user2";  private string m_PW = "1234";
-    private string m_itemChartID = "70435";
+    //private string m_itemChartID = "70435";
 
     public void Start()
     {
@@ -20,8 +20,17 @@ public class BackendManager : MonoBehaviour
 
             BackendLogin.Instance.CustomLogin(m_ID, m_PW); // 뒤끝 로그인
 
-            // [추가] chartID의 차트 정보 불러오기
-            BackendChart.Instance.ChartGet(m_itemChartID);
+            // GameData를 불러와 Local에 저장 (캐싱)
+            BackendGameData.Instance.GameDataGet();
+
+            // 우편 리스트를 불러와 우편의 정보와 inDate값들을 Local에 저장
+            BackendPost.Instance.PostListGet(PostType.Admin);
+
+            // 저장된 우편의 위치를 읽어 우편 수령. index는 우편 순서, 0은 제일 최근.
+            //BackendPost.Instance.PostReceive(PostType.Admin, 0);
+
+            // 조회된 모든 우편 수령
+            BackendPost.Instance.PostReceiveAll(PostType.Admin);
         }
         else
         {
