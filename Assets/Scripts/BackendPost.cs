@@ -189,7 +189,7 @@ public class BackendPost
 
         if (index >= _postList.Count)
         {
-            Debug.LogError($"해당 우편은 존재하지 않습니다.: 요청 index {index} / 우편 최대 갯수 {_postList.Count}");
+            Debug.LogError($"해당 우편은 존재하지 않습니다.\n선택: {index} || 총 우편 갯수: {_postList.Count}");
             return;
         }
 

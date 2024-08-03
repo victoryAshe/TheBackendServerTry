@@ -7,7 +7,8 @@ public class BackendManager : MonoBehaviour
 {
     private string m_ID = "user2";  private string m_PW = "1234";
     //private string m_itemChartID = "70435";
-    private string m_couponCode = "cbb93dbc6f0561c7b5";
+    //private string m_couponCode = "cbb93dbc6f0561c7b5";
+    //private string m_friendNickName = "Test01";
 
     public void Start()
     {
@@ -21,8 +22,10 @@ public class BackendManager : MonoBehaviour
 
             BackendLogin.Instance.CustomLogin(m_ID, m_PW); // 뒤끝 로그인
 
-            BackendGameLog.Instance.GameLogInsert(); // [추가] 게임 로그 저장 기능
-
+            //BackendFriend.Instance.SendFriendRequest(m_friendNickName);
+            //BackendFriend.Instance.GetReceivedRequestFriend(); // 친구 요청 리스트 불러오기
+            //BackendFriend.Instance.ApplyFriend(0); // 친구 요청 리스트 중 최신 요청 수락하기
+            BackendFriend.Instance.GetFriendList();
         }
         else
         {
